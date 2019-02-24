@@ -1,4 +1,7 @@
 @charset "UTF-8";
+/*---
+  import
+---*/
 @import url("https://fonts.googleapis.com/css?family=Muli");
 @import url("https://fonts.googleapis.com/css?family=Lato");
 @import url("https://fonts.googleapis.com/css?family=Montserrat");
@@ -7,11 +10,11 @@
   padding: 0;
   box-sizing: border-box; }
   *:focus, *:hover {
-    transition: 0.2s; }
+    transition: 0.1s; }
 
 body {
   padding: 20px;
-  font-family: Helvetica; }
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif; }
   @media screen and (max-width: 768px) {
     body {
       padding: 2px; } }
@@ -72,7 +75,8 @@ h1 {
       padding: 0 10px; } }
   #ggrks label {
     margin-top: 10px;
-    font-weight: 400; }
+    font-weight: 400;
+    line-height: 1.3; }
     @media screen and (max-width: 768px) {
       #ggrks label {
         line-height: 1.2;
@@ -84,66 +88,82 @@ h1 {
       #ggrks input[type="text"] {
         font-size: 18px; } }
   #ggrks textarea {
+    width: 100%;
+    margin: auto;
+    min-height: 3.2em;
     font-size: 32px;
     padding: 0.25em 0.4em;
-    color: #4484f7; }
+    line-height: 1.2;
+    color: #666;
+    border-width: 4px;
+    border-color: #fac300;
+    text-align: justify; }
     @media screen and (max-width: 768px) {
       #ggrks textarea {
         font-size: 20px; } }
-
-textarea {
-  width: 100%;
-  margin: auto;
-  min-height: 2.8em;
-  font-size: 2.8em; }
-  textarea + input {
-    margin: 10px auto;
-    width: 50%;
-    float: right;
-    box-shadow: 2px 2px 0 #1f8563; }
-
-p {
-  margin: 0; }
-
-li {
-  margin: 8px 0; }
-
-h2 {
-  font-weight: bold;
-  margin-bottom: 15px; }
-
-del {
-  color: rgba(0, 0, 0, 0.3); }
-
-.cont {
-  display: flex;
-  flex-direction: row; }
-  @media screen and (max-width: 768px) {
-    .cont {
-      flex-direction: column; } }
-
-section {
-  margin: 0 20px;
-  flex: 1 1 100%;
-  max-width: 50%;
-  display: flex;
-  flex-direction: column; }
-  @media screen and (max-width: 768px) {
-    section {
-      max-width: 100%; } }
-  section.postArea {
-    max-width: 100%;
-    margin-top: 40px; }
+    #ggrks textarea + input {
+      margin: 30px auto 0;
+      width: 50%;
+      float: right;
+      border-width: 2px;
+      box-shadow: 2px 2px 0 rgba(124, 124, 124, 0.64);
+      border-radius: 15px; }
+      #ggrks textarea + input:hover {
+        box-shadow: 0 0 0;
+        margin-top: 32px; }
+  #ggrks p {
+    margin: 0; }
+  #ggrks li {
+    margin: 8px 0; }
+  #ggrks h2 {
+    font-weight: bold;
+    margin-bottom: 15px; }
+  #ggrks del {
+    color: rgba(0, 0, 0, 0.3); }
+  #ggrks .cont {
+    display: flex;
+    flex-direction: column; }
     @media screen and (max-width: 768px) {
-      section.postArea {
-        margin-top: 15px; } }
+      #ggrks .cont {
+        flex-direction: column; } }
+  #ggrks section {
+    margin: 0 20px;
+    flex: 1 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-around; }
+    #ggrks section:first-child {
+      flex-direction: row;
+      max-width: 100%; }
+    #ggrks section .inputArea {
+      display: flex;
+      flex-direction: column; }
+      #ggrks section .inputArea:nth-child(2) {
+        margin: 0 20px; }
+    @media screen and (max-width: 768px) {
+      #ggrks section {
+        max-width: 100%; } }
+    #ggrks section.postArea {
+      max-width: 100%;
+      margin-top: 40px; }
+      @media screen and (max-width: 768px) {
+        #ggrks section.postArea {
+          margin-top: 15px; } }
+    #ggrks section.org_mainWord {
+      margin-bottom: 1em; }
+      #ggrks section.org_mainWord input {
+        border-color: rgba(4, 86, 235, 0.71);
+        border-width: 2px; }
+    #ggrks section .org_absolute input {
+      border-color: rgba(24, 187, 89, 0.85);
+      border-width: 2px; }
+    #ggrks section .org_exclusion input {
+      border-color: rgba(231, 70, 35, 0.9);
+      border-width: 2px; }
 
 form {
   width: 100%;
   margin: auto; }
-
-.cont {
-  display: flex; }
 
 /* 各ベンダープレフィックスが取れた標準版！！(http://caniuse.com/#search=placeholder-shown) */
 :placeholder-shown {
@@ -195,16 +215,6 @@ input[type='button'] {
   border-radius: 0.4rem;
   color: #fff; }
 
-.button:focus,
-.button:hover,
-button:focus,
-button:hover,
-input[type='button']:focus,
-input[type='button']:hover {
-  background-color: #606c76;
-  border-color: #606c76;
-  color: #fff; }
-
 .button.button-outline,
 button.button-outline,
 input[type='button'].button-outline,
@@ -213,12 +223,6 @@ input[type='submit'].button-outline {
   background-color: transparent;
   color: #36a84d; }
 
-.button.button-outline:focus,
-.button.button-outline:hover,
-button.button-outline:focus,
-button.button-outline:hover,
-input[type='button'].button-outline:focus,
-input[type='button'].button-outline:hover,
 input[type='submit'].button-outline:focus,
 input[type='submit'].button-outline:hover {
   background-color: transparent;
@@ -234,8 +238,8 @@ select:focus {
 input[type='text']:focus,
 textarea:focus,
 input[type='text']:hover {
-  border-color: #36a84d;
-  background-color: rgba(208, 245, 221, 0.23);
+  border-color: #fabc00;
+  background-color: rgba(245, 246, 213, 0.4);
   outline: 0;
   cursor: pointer; }
 

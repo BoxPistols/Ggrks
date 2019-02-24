@@ -2,13 +2,16 @@ new Vue({
   el: "#ggrks",
 
   data: {
-    search: "",
+    search1: "",
+    search2: "",
+    search3: "",
     // not: "-" + "",
     // att: '"' + "" + '"',
     not: "",
     att: "",
     insite: "",
-    result: ""
+    result: "",
+
   },
 
   methods: {
