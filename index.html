@@ -40,7 +40,7 @@
         <form action="http://www.google.co.jp/search" method="get" target="_blank">
           <label for="">検索キーワード</label>
           <!--     <textarea name="q" id="" cols="30" rows="10" v-bind="result">{{ search }} -{{ not }} "{{ att }}" site:{{ insite }}</textarea> -->
-          <textarea name="q" class="" cols="30" rows="10" v-bind="result">{{ search }} {{ not }} {{ att }}</textarea>
+          <textarea name="q" class="" cols="30" rows="10" v-bind="result">{{ search }} -{{ not }} "{{ att }}"</textarea>
           <input class="button-black button-outline" type="submit" name="btnG" value="Ggrks検索する　>>">
         </form>
       </section>
@@ -51,4 +51,5 @@
 
   <script src="js/index.js"></script>
 </body>
+
 </html>
