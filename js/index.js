@@ -14,13 +14,4 @@ new Vue({
 
   },
 
-  methods: {
-    /* 	toggle: function(todo){
-    	      todo.done = !todo.done
-        }, */
-    set: function(event) {
-      /*       puth.not.result */
-    }
-  }
-  //end
 });

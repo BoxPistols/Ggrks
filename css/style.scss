@@ -260,8 +260,24 @@ form {
   color: lightgray;
 }
 /* Google Chrome, Safari, Opera 15+, Android, iOS */
+@media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm) {
+  ::-webkit-input-placeholder {
+    color: lightgray;
+    padding-top: 0.5em;
+  }
+}
+// @media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm) {
+//   .iphone {
+//     ::-webkit-input-placeholder {
+//       color: lightgray;
+//       padding-top: 0.5em;
+//     }
+//   }
+// }
+
 ::-webkit-input-placeholder {
   color: lightgray;
+  padding-top: 0.2em;
 }
 /* Firefox 18- */
 :-moz-placeholder {
