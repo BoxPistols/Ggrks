@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>ググれカス</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/milligram/1.3.0/milligram.min.css'>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <h1>
+    <span>G</span><span>g</span><span>r</span><span>k</span><span>s</span>
+  </h1>
+
+  <div id="ggrks">
+    <div class="cont">
+
+      <section>
+        <label for="">メイン検索ワード</label>
+        <input type="text" v-model="search" placeholder="検索ワード">
+        <label for="">絶対ワード</label>
+        <input type="text" v-model="att" placeholder="絶対ワード">
+      </section>
+
+      <section>
+        <label for="">除外ワード</label>
+        <input type="text" v-model="not" placeholder="除外ワード">
+        <!--    <label for="">サイト内検索</label>
+   <input type="text" v-model="insite" placeholder="hoge.com"> -->
+      </section>
+    </div>
+
+    <div class="cont">
+      <section class="postArea">
+        <form action="http://www.google.co.jp/search" method="get" target="_blank">
+          <label for="">検索キーワード</label>
+          <!--     <textarea name="q" id="" cols="30" rows="10" v-bind="result">{{ search }} -{{ not }} "{{ att }}" site:{{ insite }}</textarea> -->
+          <textarea name="q" class="" cols="30" rows="10" v-bind="result">{{ search }} {{ not }} {{ att }}</textarea>
+          <input class="button-black button-outline" type="submit" name="btnG" value="Ggrks検索する　>>">
+        </form>
+      </section>
+
+    </div>
+  </div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.7/vue.min.js'></script>
+
+  <script src="js/index.js"></script>
+</body>
+</html>

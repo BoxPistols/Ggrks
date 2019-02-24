@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css?family=Muli");
+@import url("https://fonts.googleapis.com/css?family=Lato");
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+
+body {
+  // background: #20262E;
+  padding: 20px;
+  font-family: Helvetica;
+}
+
+h1 {
+  font-family: "Muli", sans-serif;
+  text-align: center;
+  font-weight: bold;
+  font-size: 80px;
+  line-height: 1.1;
+
+  span {
+    vertical-align: text-bottom;
+    display: inline-block;
+
+    &:nth-child(1) {
+      color: #4484f7;
+      font-family: "Lato", sans-serif;
+      font-weight: 400;
+      font-size: 100px;
+      transform: scale(1.05, 1);
+      letter-spacing: -3px;
+    }
+
+    &:nth-child(2) {
+      color: #e94334;
+      font-family: "Montserrat", sans-serif;
+      font-size: 84px;
+      transform: scale(0.9, 1);
+      letter-spacing: -5px;
+    }
+
+    &:nth-child(3) {
+      color: #fabc00;
+      font-family: "Montserrat", sans-serif;
+      letter-spacing: -3px;
+      transform: scale(1.08, 0.95);
+      font-size: 90px;
+    }
+
+    &:nth-child(4) {
+      color: #36a84d;
+      font-family: "Montserrat", sans-serif;
+      font-size: 88px;
+      // letter-spacing: 1px;
+      transform: scale(0.9, 1);
+    }
+
+    &:nth-child(5) {
+      color: #e94334;
+      font-family: "Montserrat", sans-serif;
+      font-size: 85px;
+    }
+  }
+}
+
+#ggrks {
+  background: #fff;
+  border-radius: 4px;
+  padding: 10px;
+  transition: all 0.2s;
+  height: 70vh;
+  overflow-y: scroll;
+  max-width: 800px;
+  margin: auto;
+  // text-align: center;
+  label {
+    margin-top: 10px;
+  }
+
+  input[type="text"] {
+    font-size: 24px;
+    color: #555;
+  }
+
+  textarea {
+    font-size: 32px;
+    // color: #e84333;
+    color: #4484f7;
+  }
+}
+
+textarea {
+  // min-width: 80vw;
+  width: 100%;
+  margin: auto;
+  min-height: 2.8em;
+  font-size: 2.8em;
+  box-shadow: 2px 2px 2px #aaa;
+
+  + input {
+    margin: 10px auto;
+    width: 50%;
+    float: right;
+  }
+}
+
+p {
+  margin: 0;
+}
+
+li {
+  margin: 8px 0;
+}
+
+h2 {
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+del {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.cont {
+  display: flex;
+}
+
+section {
+  margin: 0 20px;
+  flex: 1 1 100%;
+  max-width: 50%;
+  display: flex;
+  flex-direction: column;
+
+  &.postArea {
+    max-width: 100%;
+  }
+}
+
+form {
+  margin-top: 20px;
+  // min-width: 80vw;
+  width: 100%;
+  margin: auto;
+}
+
+.cont {
+  display: flex;
+  // flex-direction: column;
+  // justify-content: center;
+  // align-items: center;
+  // background: #000;
+}
+
+.button,
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  text-transform: inherit;
+  font-size: 1.2em;
+  height: 2.5em;
+}
+/* 各ベンダープレフィックスが取れた標準版！！(http://caniuse.com/#search=placeholder-shown) */
+:placeholder-shown {
+  color: lightgray;
+}
+/* Google Chrome, Safari, Opera 15+, Android, iOS */
+::-webkit-input-placeholder {
+  color: lightgray;
+}
+/* Firefox 18- */
+:-moz-placeholder {
+  color: lightgray;
+  opacity: 1;
+}
+/* Firefox 19+ */
+::-moz-placeholder {
+  color: lightgray;
+  opacity: 1;
+}
+/* IE 10+ */
+:-ms-input-placeholder {
+  color: lightgray;
+}
