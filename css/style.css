@@ -2,11 +2,19 @@
 @import url("https://fonts.googleapis.com/css?family=Muli");
 @import url("https://fonts.googleapis.com/css?family=Lato");
 @import url("https://fonts.googleapis.com/css?family=Montserrat");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+  *:focus, *:hover {
+    transition: 0.2s; }
 
 body {
   padding: 20px;
-  font-family: Helvetica;
-}
+  font-family: Helvetica; }
+  @media screen and (max-width: 768px) {
+    body {
+      padding: 2px; } }
 
 h1 {
   font-family: "Muli", sans-serif;
@@ -14,166 +22,221 @@ h1 {
   font-weight: bold;
   font-size: 80px;
   line-height: 1.1;
-}
-
-h1 span {
-  vertical-align: text-bottom;
-  display: inline-block;
-}
-
-h1 span:nth-child(1) {
-  color: #4484f7;
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  font-size: 100px;
-  transform: scale(1.05, 1);
-  letter-spacing: -3px;
-}
-
-h1 span:nth-child(2) {
-  color: #e94334;
-  font-family: "Montserrat", sans-serif;
-  font-size: 84px;
-  transform: scale(0.9, 1);
-  letter-spacing: -5px;
-}
-
-h1 span:nth-child(3) {
-  color: #fabc00;
-  font-family: "Montserrat", sans-serif;
-  letter-spacing: -3px;
-  transform: scale(1.08, 0.95);
-  font-size: 90px;
-}
-
-h1 span:nth-child(4) {
-  color: #36a84d;
-  font-family: "Montserrat", sans-serif;
-  font-size: 88px;
-  transform: scale(0.9, 1);
-}
-
-h1 span:nth-child(5) {
-  color: #e94334;
-  font-family: "Montserrat", sans-serif;
-  font-size: 85px;
-}
+  margin: 3vh 20px 5vh; }
+  @media screen and (max-width: 768px) {
+    h1 {
+      margin: 2px 10px 1vh;
+      transform: scale(0.75, 0.75); } }
+  h1 span {
+    vertical-align: text-bottom;
+    display: inline-block; }
+    h1 span:nth-child(1) {
+      color: #4484f7;
+      font-family: "Lato", sans-serif;
+      font-weight: 400;
+      font-size: 100px;
+      transform: scale(1.05, 1);
+      letter-spacing: -3px; }
+    h1 span:nth-child(2) {
+      color: #e94334;
+      font-family: "Montserrat", sans-serif;
+      font-size: 84px;
+      transform: scale(0.9, 1);
+      letter-spacing: -5px; }
+    h1 span:nth-child(3) {
+      color: #fabc00;
+      font-family: "Montserrat", sans-serif;
+      letter-spacing: -3px;
+      transform: scale(1.08, 0.95);
+      font-size: 90px; }
+    h1 span:nth-child(4) {
+      color: #36a84d;
+      font-family: "Montserrat", sans-serif;
+      font-size: 88px;
+      transform: scale(0.9, 1); }
+    h1 span:nth-child(5) {
+      color: #e94334;
+      font-family: "Montserrat", sans-serif;
+      font-size: 85px; }
 
 #ggrks {
   background: #fff;
   border-radius: 4px;
   padding: 10px;
   transition: all 0.2s;
-  height: 70vh;
-  overflow-y: scroll;
+  height: 100%;
   max-width: 800px;
-  margin: auto;
-}
-
-#ggrks label {
-  margin-top: 10px;
-}
-
-#ggrks input[type="text"] {
-  font-size: 24px;
-  color: #555;
-}
-
-#ggrks textarea {
-  font-size: 32px;
-  color: #4484f7;
-}
+  margin: auto; }
+  @media screen and (max-width: 768px) {
+    #ggrks {
+      padding: 0 10px; } }
+  #ggrks label {
+    margin-top: 10px;
+    font-weight: 400; }
+    @media screen and (max-width: 768px) {
+      #ggrks label {
+        line-height: 1.2;
+        margin: 5px 0; } }
+  #ggrks input[type="text"] {
+    font-size: 24px;
+    color: #555; }
+    @media screen and (max-width: 768px) {
+      #ggrks input[type="text"] {
+        font-size: 18px; } }
+  #ggrks textarea {
+    font-size: 32px;
+    padding: 0.25em 0.4em;
+    color: #4484f7; }
+    @media screen and (max-width: 768px) {
+      #ggrks textarea {
+        font-size: 20px; } }
 
 textarea {
   width: 100%;
   margin: auto;
   min-height: 2.8em;
-  font-size: 2.8em;
-  box-shadow: 2px 2px 2px #aaa;
-}
-
-textarea+input {
-  margin: 10px auto;
-  width: 50%;
-  float: right;
-}
+  font-size: 2.8em; }
+  textarea + input {
+    margin: 10px auto;
+    width: 50%;
+    float: right;
+    box-shadow: 2px 2px 0px #1f8563; }
 
 p {
-  margin: 0;
-}
+  margin: 0; }
 
 li {
-  margin: 8px 0;
-}
+  margin: 8px 0; }
 
 h2 {
   font-weight: bold;
-  margin-bottom: 15px;
-}
+  margin-bottom: 15px; }
 
 del {
-  color: rgba(0, 0, 0, 0.3);
-}
+  color: rgba(0, 0, 0, 0.3); }
 
 .cont {
   display: flex;
-}
+  flex-direction: row; }
+  @media screen and (max-width: 768px) {
+    .cont {
+      flex-direction: column; } }
 
 section {
   margin: 0 20px;
   flex: 1 1 100%;
   max-width: 50%;
   display: flex;
-  flex-direction: column;
-}
-
-section.postArea {
-  max-width: 100%;
-}
+  flex-direction: column; }
+  @media screen and (max-width: 768px) {
+    section {
+      max-width: 100%; } }
+  section.postArea {
+    max-width: 100%;
+    margin-top: 40px; }
+    @media screen and (max-width: 768px) {
+      section.postArea {
+        margin-top: 15px; } }
 
 form {
-  margin-top: 20px;
   width: 100%;
-  margin: auto;
-}
+  margin: auto; }
 
 .cont {
-  display: flex;
-}
-
-.button,
-button,
-input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-  text-transform: inherit;
-  font-size: 1.2em;
-  height: 2.5em;
-}
+  display: flex; }
 
 /* 各ベンダープレフィックスが取れた標準版！！(http://caniuse.com/#search=placeholder-shown) */
 :placeholder-shown {
-  color: lightgray;
-}
+  color: lightgray; }
 
 /* Google Chrome, Safari, Opera 15+, Android, iOS */
 ::-webkit-input-placeholder {
-  color: lightgray;
-}
+  color: lightgray; }
 
 /* Firefox 18- */
 :-moz-placeholder {
   color: lightgray;
-  opacity: 1;
-}
+  opacity: 1; }
 
 /* Firefox 19+ */
 ::-moz-placeholder {
   color: lightgray;
-  opacity: 1;
-}
+  opacity: 1; }
 
 /* IE 10+ */
 :-ms-input-placeholder {
-  color: lightgray;
-}
+  color: lightgray; }
+
+.button,
+button,
+input[type="button"],
+input[type="submit"] {
+  text-transform: inherit;
+  font-size: calc(14px + .6vw); }
+  @media screen and (max-width: 768px) {
+    .button,
+    button,
+    input[type="button"],
+    input[type="submit"] {
+      font-size: 1.2em; } }
+
+input[type="submit"] {
+  margin-top: 20px;
+  height: 3.5em; }
+  @media screen and (max-width: 768px) {
+    input[type="submit"] {
+      width: 100%; } }
+
+.button,
+button,
+input[type='button'] {
+  background-color: #36a84d;
+  border: 0.1rem solid #36a84d;
+  border-radius: 0.4rem;
+  color: #fff; }
+
+.button:focus,
+.button:hover,
+button:focus,
+button:hover,
+input[type='button']:focus,
+input[type='button']:hover {
+  background-color: #606c76;
+  border-color: #606c76;
+  color: #fff; }
+
+.button.button-outline,
+button.button-outline,
+input[type='button'].button-outline,
+input[type='reset'].button-outline,
+input[type='submit'].button-outline {
+  background-color: transparent;
+  color: #36a84d; }
+
+.button.button-outline:focus,
+.button.button-outline:hover,
+button.button-outline:focus,
+button.button-outline:hover,
+input[type='button'].button-outline:focus,
+input[type='button'].button-outline:hover,
+input[type='submit'].button-outline:focus,
+input[type='submit'].button-outline:hover {
+  background-color: transparent;
+  border-color: #e94334;
+  color: #e94334; }
+
+input[type='submit'],
+input[type='text']:focus textarea:focus,
+select:focus {
+  border-color: #36a84d;
+  outline: 0; }
+
+input[type='text']:focus,
+textarea:focus,
+input[type='text']:hover {
+  border-color: #36a84d;
+  background-color: rgba(208, 245, 221, 0.23);
+  outline: 0;
+  cursor: pointer; }
+
+/*# sourceMappingURL=style.css.map */

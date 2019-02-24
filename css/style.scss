@@ -1,11 +1,26 @@
+$bkp: 768px;
 @import url("https://fonts.googleapis.com/css?family=Muli");
 @import url("https://fonts.googleapis.com/css?family=Lato");
 @import url("https://fonts.googleapis.com/css?family=Montserrat");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  &:focus,
+  &:hover {
+    transition: 0.2s;
+  }
+}
 
 body {
   // background: #20262E;
   padding: 20px;
   font-family: Helvetica;
+  @media screen and (max-width: $bkp) {
+    padding: 2px;
+  }
 }
 
 h1 {
@@ -14,6 +29,11 @@ h1 {
   font-weight: bold;
   font-size: 80px;
   line-height: 1.1;
+  margin: 3vh 20px 5vh;
+  @media screen and (max-width: $bkp) {
+    margin: 2px 10px 1vh;
+    transform: scale(0.75,0.75);
+  }
 
   span {
     vertical-align: text-bottom;
@@ -65,24 +85,38 @@ h1 {
   border-radius: 4px;
   padding: 10px;
   transition: all 0.2s;
-  height: 70vh;
-  overflow-y: scroll;
+  height: 100%;
+  // overflow-y: scroll;
   max-width: 800px;
   margin: auto;
-  // text-align: center;
+  @media screen and (max-width: $bkp) {
+    padding: 0 10px;
+  }
+
   label {
     margin-top: 10px;
+    font-weight: 400;
+    @media screen and (max-width: $bkp) {
+      line-height: 1.2;
+      margin: 5px 0;
+    }
   }
 
   input[type="text"] {
     font-size: 24px;
     color: #555;
+    @media screen and (max-width: $bkp) {
+      font-size: 18px;
+    }
   }
 
   textarea {
     font-size: 32px;
-    // color: #e84333;
+    padding: 0.25em 0.4em;
     color: #4484f7;
+    @media screen and (max-width: $bkp) {
+      font-size: 20px;
+    }
   }
 }
 
@@ -92,12 +126,12 @@ textarea {
   margin: auto;
   min-height: 2.8em;
   font-size: 2.8em;
-  box-shadow: 2px 2px 2px #aaa;
 
   + input {
     margin: 10px auto;
     width: 50%;
     float: right;
+    box-shadow: 2px 2px 0px #1f8563;
   }
 }
 
@@ -120,6 +154,10 @@ del {
 
 .cont {
   display: flex;
+  flex-direction: row;
+  @media screen and (max-width: $bkp) {
+    flex-direction: column;
+  }
 }
 
 section {
@@ -128,14 +166,21 @@ section {
   max-width: 50%;
   display: flex;
   flex-direction: column;
+  @media screen and (max-width: $bkp) {
+    max-width: 100%;
+  }
 
   &.postArea {
     max-width: 100%;
+    margin-top: 40px;
+    @media screen and (max-width: $bkp) {
+      margin-top: 15px;
+    }
   }
 }
 
 form {
-  margin-top: 20px;
+  // margin-top: 40px;
   // min-width: 80vw;
   width: 100%;
   margin: auto;
@@ -147,16 +192,6 @@ form {
   // justify-content: center;
   // align-items: center;
   // background: #000;
-}
-
-.button,
-button,
-input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-  text-transform: inherit;
-  font-size: 1.2em;
-  height: 2.5em;
 }
 /* 各ベンダープレフィックスが取れた標準版！！(http://caniuse.com/#search=placeholder-shown) */
 :placeholder-shown {
@@ -180,3 +215,4 @@ input[type="submit"] {
 :-ms-input-placeholder {
   color: lightgray;
 }
+@import "button";
