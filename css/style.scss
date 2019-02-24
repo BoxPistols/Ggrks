@@ -35,8 +35,10 @@ h1 {
   line-height: 1.1;
   margin: 3vh 20px 5vh;
   @media screen and (max-width: $bkp) {
-    margin: 2px 10px 1vh;
-    transform: scale(0.75,0.75);
+    // margin: 2px 10px 0.8vh;
+    // transform: scale(0.65,0.65);
+    margin: -15px 0;
+    transform: scale(0.5, 0.5);
   }
 
   span {
@@ -138,6 +140,9 @@ h1 {
       border-width: 2px;
       box-shadow: 2px 2px 0 rgba(#7c7c7c, 0.64);
       border-radius: 15px;
+      @media screen and (max-width: $bkp) {
+        width: 100%;
+      }
 
       &:hover {
         box-shadow: 0 0 0;
@@ -177,7 +182,10 @@ h1 {
     max-width: 100%;
     display: flex;
     justify-content: space-around;
-    // flex-direction: column;
+    @media screen and (max-width: $bkp) {
+      flex-direction: column;
+    }
+
     &:first-child {
       flex-direction: row;
       max-width: 100%;
@@ -189,6 +197,9 @@ h1 {
 
       &:nth-child(2) {
         margin: 0 20px;
+        @media screen and (max-width: $bkp) {
+          margin: 0;
+        }
       }
     }
     @media screen and (max-width: $bkp) {
@@ -209,6 +220,9 @@ h1 {
       // padding: 10px;
       // border-radius: 20px;
       margin-bottom: 1em;
+      @media screen and (max-width: $bkp) {
+        flex-direction: column;
+      }
 
       input {
         // border-color: $blue;
@@ -264,3 +278,11 @@ form {
   color: lightgray;
 }
 @import "button";
+
+footer,
+footer a {
+  margin-top: 50px;
+  padding-bottom: 10px;
+  text-align: center;
+  color: #999;
+}
