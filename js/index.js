@@ -15,3 +15,8 @@ new Vue({
   },
 
 });
+
+
+$('#clear').click(function() {
+  location.reload();
+});

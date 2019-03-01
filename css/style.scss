@@ -295,6 +295,20 @@ form {
 }
 @import "button";
 
+
+.resetArea{
+  margin: 1em auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  button.button{
+    background-color: #f3f3f3;
+    border-color: #666;
+    color: #444;
+    font-weight: 300;
+  }
+}
+
 footer,
 footer a {
   margin-top: 50px;
