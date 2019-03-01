@@ -256,12 +256,12 @@ input[type='text']:focus,
 textarea:focus,
 input[type='text']:hover {
   border-color: #fabc00;
-  background-color: rgba(245, 246, 213, 0.4);
+  background-color: rgba(245, 246, 213, 0.7);
   outline: 0;
   cursor: pointer; }
 
 .resetArea {
-  margin: 1em auto;
+  margin: 2em auto 0;
   width: 100%;
   display: flex;
   justify-content: center; }
