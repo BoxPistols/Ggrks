@@ -17,6 +17,18 @@
       $("body").addClass("iPhone");
     };
   </script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123049095-6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-123049095-6');
+</script>
+
+
 </head>
 
 <body>
@@ -64,7 +76,7 @@
 
     <div class="cont">
       <section class="postArea">
-        <form action="http://www.google.co.jp/search" method="get" target="_blank">
+        <form action="https://www.google.co.jp/search" method="get" target="_blank">
           <label for="">検索キーワード</label>
           <!--     <textarea name="q" id="" cols="30" rows="10" v-bind="result">{{ search }} -{{ not }} "{{ att }}" site:{{ insite }}</textarea> -->
           <textarea name="q" class="" cols="30" rows="10" v-bind="result">{{ search1 }} {{ search2 }} {{ search3 }} "{{ att }}" -{{ not }}</textarea>
